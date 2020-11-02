@@ -98,7 +98,7 @@ unsigned invert(unsigned x,int p ,int n){
    unsigned mask_l = ~0 << (p+n-1);
    unsigned mask_r = ~0;
    mask_r=mask_r >>((sizeof(unsigned)*8)-(p+1-n));
-   mask_l |= mask_r ;
+   mask_l |= mask_r ; // hehe l= l | r
    vals = vals & ~mask_l ;
    bin(vals);
    x= mask_l & x;
